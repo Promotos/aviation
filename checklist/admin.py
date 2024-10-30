@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Airplane, Checklist, ChecklistItem
+
+admin.site.register(Airplane)
+admin.site.register(Checklist)
+admin.site.register(ChecklistItem)
