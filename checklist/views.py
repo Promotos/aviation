@@ -1,10 +1,11 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 from checklist.models import Airplane
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the checklist index...")
+    return render(request, "index.html")
 
 
 def airplane_detail(request, airplane_id: int):
