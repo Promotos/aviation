@@ -5,7 +5,7 @@ from checklist.models import Airplane
 
 
 def index(request):
-    return render(request, "index.html")
+    return render(request, "checklist_index.html")
 
 
 def airplane_detail(request, airplane_id: int):

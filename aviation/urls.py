@@ -21,6 +21,8 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name="index"),
-    path('checklist/', include("checklist.urls")),
+    path('checklist/', include("checklist.urls", namespace="checklist")),
     path('admin/', admin.site.urls),
+    path("accounts/", include("django.contrib.auth.urls")),
+    path("accounts/", include("accounts.urls")),
 ]

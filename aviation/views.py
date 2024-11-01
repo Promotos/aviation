@@ -1,5 +1,5 @@
-from django.shortcuts import redirect
+from django.shortcuts import render
 
 
 def index(request):
-    return redirect("/checklist")
+    return render(request, "index.html")
