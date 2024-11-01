@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-gdc(us(&5jv(4^6b1fnf8^u^0ig(^jn#s@!-#%&5vac7ue5adl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "aviation.elkma.de"
+]
 
 
 # Application definition
