@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-gdc(us(&5jv(4^6b1fnf8^u^0ig(^jn#s@!-#%&5vac7ue5adl
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    "127.0.0.1",
     "aviation.elkma.de"
 ]
 
