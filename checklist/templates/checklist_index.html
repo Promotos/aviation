@@ -31,6 +31,22 @@ Hi {{ user.username }}!
 </p>
 
 <div class="ui cards">
+  {% for club in clubs %}
+      <div class="ui card">
+          <div class="content">
+            <a class="header">{{ club.name }}</a>
+            <div class="description">
+              <a href="{% url 'checklist:index' %}">Checklisten</a>
+            </div>
+          </div>
+        </div>
+  {% empty %}
+      <p>Du bist noch keinen Verein zugeordnet.</p>
+  {% endfor %}
+</div>
+
+
+<div class="ui cards">
 <div class="ui card">
     <div class="image">
       <img src="/images/avatar2/large/kristy.png">

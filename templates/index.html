@@ -2,11 +2,12 @@
 
 {% block title %}Aviation{% endblock %}
 
-
 {% block content %}
     {% if user.is_authenticated %}
-        Hi {{ user.username }}!
-        <p><a href="{% url 'checklist:index' %}">Checklisten</a></p>
+        <h2>Hi {{ user.username }}!</h2>
+        <br>
+        <a href="{% url 'checklist:index' %}">Checklisten</a>
+
     {% else %}
         <p><a href="{% url 'login' %}">Log In</a></p>
         <p><a href="{% url 'signup' %}">Registrieren</a></p>
