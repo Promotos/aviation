@@ -6,11 +6,12 @@ Welcome
 
 {% block menu %}
   {% include "checklist_menu.html" %}
+  <a href="{% url 'checklist:club_index' club_id=club.id %}" class="header item">{{club.name}}</a>
 {% endblock %}
 
 {% block content %}
 <h1 class="ui header">Verein {{ club.name }}</h1>
-
+<p>{{ club.description }}</p>
 <div class="ui cards">
   {% for airplane in airplanes %}
       <div class="ui card">

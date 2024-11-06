@@ -6,10 +6,12 @@ Welcome
 
 {% block menu %}
   {% include "checklist_menu.html" %}
+  <a href="{% url 'checklist:club_index' club_id=club.id %}" class="header item">{{club.name}}</a>
+  <a href="{% url 'checklist:airplane_index' club_id=club.id airplane_id=airplane.id %}" class="header item">{{airplane.name}}</a>
 {% endblock %}
 
 {% block content %}
-<h1 class="ui header">Airplane detail</h1>
+<h1 class="ui header">Checklisten für {{ airplane.name }}</h1>
 
 <div class="ui cards">
   {% for checklist in checklists %}
