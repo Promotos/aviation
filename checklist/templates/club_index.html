@@ -9,6 +9,21 @@ Welcome
 {% endblock %}
 
 {% block content %}
-<h1 class="ui header">Club Index</h1>
+<h1 class="ui header">Verein {{ club.name }}</h1>
+
+<div class="ui cards">
+  {% for airplane in airplanes %}
+      <div class="ui card">
+          <div class="content">
+            <a class="header">{{ airplane.name }}</a>
+            <div class="description">
+              <a href="{% url 'checklist:airplane_index' club_id=club.id airplane_id=airplane.id %}">Checklisten</a>
+            </div>
+          </div>
+        </div>
+  {% empty %}
+      <p>Du bist noch keinen Verein zugeordnet.</p>
+  {% endfor %}
+</div>
 
 {% endblock %}

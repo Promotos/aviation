@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+Welcome
+{% endblock %}
+
+{% block menu %}
+  {% include "checklist_menu.html" %}
+{% endblock %}
+
+{% block content %}
+<h1 class="ui header">Checklist detail</h1>
+
+{% for item in items %}
+<br>  {{item.name}}
+{% endfor %}
+
+{% endblock %}
