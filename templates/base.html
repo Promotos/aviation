@@ -35,6 +35,14 @@
             Aviation
           </a>
           {% block menu %}{% endblock %}
+          {% if user.is_authenticated %}
+            <p>
+              <form action="{% url 'logout' %}" class="header item" method="post">
+                {% csrf_token %}
+                <button type="submit">Abmelden</button>
+              </form>
+            </p>
+          {% endif %}
         </div>
       </div>
     

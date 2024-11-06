@@ -5,11 +5,8 @@ Welcome
 {% endblock %}
 
 {% block menu %}
-<a href="#" class="header item">
-  Hauptseite
-</a>
+  {% include "checklist_menu.html" %}
 {% endblock %}
-
 
 {% block content %}
 <h1 class="ui header">Willkommen bei den Checklisten</h1>
@@ -18,11 +15,6 @@ Welcome
 <p>
 {% if user.is_authenticated %}
 Hi {{ user.username }}!
-
-<form action="{% url 'logout' %}" method="post">
-  {% csrf_token %}
-  <button type="submit">Log Out</button>
-</form>
 
 {% else %}
 <p>You are not logged in</p>
@@ -36,80 +28,13 @@ Hi {{ user.username }}!
           <div class="content">
             <a class="header">{{ club.name }}</a>
             <div class="description">
-              <a href="{% url 'checklist:index' %}">Checklisten</a>
+              <a href="{% url 'checklist:club_index' club_id=club.id %}">Checklisten</a>
             </div>
           </div>
         </div>
   {% empty %}
       <p>Du bist noch keinen Verein zugeordnet.</p>
   {% endfor %}
-</div>
-
-
-<div class="ui cards">
-<div class="ui card">
-    <div class="image">
-      <img src="/images/avatar2/large/kristy.png">
-    </div>
-    <div class="content">
-      <a class="header">Kristy</a>
-      <div class="meta">
-        <span class="date">Joined in 2013</span>
-      </div>
-      <div class="description">
-        Kristy is an art director living in New York.
-      </div>
-    </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-        22 Friends
-      </a>
-    </div>
-  </div>
-
-  <div class="ui card">
-    <div class="image">
-      <img src="/images/avatar2/large/kristy.png">
-    </div>
-    <div class="content">
-      <a class="header">Kristy</a>
-      <div class="meta">
-        <span class="date">Joined in 2013</span>
-      </div>
-      <div class="description">
-        Kristy is an art director living in New York.
-      </div>
-    </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-        22 Friends
-      </a>
-    </div>
-  </div>
-
-  <div class="ui card">
-    <div class="image">
-      <img src="/images/avatar2/large/kristy.png">
-    </div>
-    <div class="content">
-      <a class="header">Kristy</a>
-      <div class="meta">
-        <span class="date">Joined in 2013</span>
-      </div>
-      <div class="description">
-        Kristy is an art director living in New York.
-      </div>
-    </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-        22 Friends
-      </a>
-    </div>
-  </div>
-
 </div>
 
 {% endblock %}

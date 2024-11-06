@@ -12,13 +12,9 @@ def index(request: HttpRequest):
     if request.user.is_authenticated:
         clubs = Club.objects.filter(users__in=[request.user])
 
-    return render(request, "checklist_index.html", {"clubs": clubs})    
+    return render(request, "checklist_index.html", {"clubs": clubs})
 
 
-#@login_required
-#def airplane_detail(request, airplane_id: int):
-#    try:
-#        ap = Airplane.objects.get(id=airplane_id)
-#        return HttpResponse(f"Details for Airplane {ap}")
-#    except Airplane.DoesNotExist:
-#        return HttpResponse(f"Airplane {airplane_id} does not exist")
+@login_required
+def club_index(request, club_id: int):
+    return render(request, "club_index.html")

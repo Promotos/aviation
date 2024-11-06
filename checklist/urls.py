@@ -8,5 +8,5 @@ app_name = "checklist"
 
 urlpatterns = [
     path("", views.index, name="index"),
-    #path("airplane/<int:airplane_id>/", views.airplane_detail, name="airplane_detail")
+    path("club/<int:club_id>/", views.club_index, name="club_index")
 ]
