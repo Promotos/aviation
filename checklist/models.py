@@ -24,6 +24,7 @@ class Airplane(models.Model):
 class Checklist(models.Model):
     airplane = models.ForeignKey(Airplane, on_delete=models.CASCADE, help_text="Für welches Flugzeug diese Checkliste gilt.")
     name = models.CharField(max_length=50, help_text="Name der Checkliste.")
+    description = models.TextField(max_length=500, help_text="Beschreibung der Checkliste.", blank=True)
 
     def __str__(self) -> str:
         return f"{self.name} ({self.airplane})"
