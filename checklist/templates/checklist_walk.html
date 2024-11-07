@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}
+Welcome
+{% endblock %}
+
+{% block menu %}
+  {% include "checklist_menu.html" %}
+  <a href="{% url 'checklist:club_index' club_id=club.id %}" class="header item">{{club.name}}</a>
+  <a href="{% url 'checklist:airplane_index' club_id=club.id airplane_id=airplane.id %}" class="header item">{{airplane.name}}</a>
+  <a href="{% url 'checklist:checklist_detail' club_id=club.id airplane_id=airplane.id checklist_id=checklist.id %}" class="header item">{{checklist.name}}</a>
+{% endblock %}
+
+{% block content %}
+<h1 class="ui header"> {{current_item.group}} ({{index}} / {{count}}) </h1>
+<h2 class="ui header"> {{current_item.name}} </h2>
+
+{{current_item.description}}
+
+<br>
+
+{{current_item.hint}}
+
+{% if next_item %}
+<center>
+<div class="ui center compact segment">
+    <div class="ui fitted toggle checkbox">
+      <input type="checkbox" onchange="window.location.href='{% url 'checklist:checklist_walk' club_id=club.id airplane_id=airplane.id checklist_id=checklist.id item_id=next_item.id %}'">
+      <label></label>
+    </div>
+</div>
+</center>
+{% else %}
+<center>
+    <button class="ui positive basic button">
+        <a href="{% url 'checklist:checklist_detail' club_id=club.id airplane_id=airplane.id checklist_id=checklist.id %}" class="header item">Erledigt</a>
+    </button>
+</center>
+{% endif %}
+
+<br>
+
+<hr>
+
+{% if last_item %}
+    <button class="ui button">
+        <a href="{% url 'checklist:checklist_walk' club_id=club.id airplane_id=airplane.id checklist_id=checklist.id item_id=last_item.id %}" class="header item">zurück</a>
+    </button>
+{% endif %}
+
+{% if next_item %}
+    <button class="ui button">
+        <a href="{% url 'checklist:checklist_walk' club_id=club.id airplane_id=airplane.id checklist_id=checklist.id item_id=next_item.id %}" class="header item">nächstes</a>
+    </button>
+{% endif %}
+
+{% endblock %}

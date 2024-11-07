@@ -35,5 +35,20 @@ def checklist_detail(request: HttpRequest, club_id: int, airplane_id: int, check
     club = Club.objects.get(id=club_id)
     airplane = Airplane.objects.get(id=airplane_id)
     checklist = Checklist.objects.get(id=checklist_id)
-    items = ChecklistItem.objects.filter(checklist=checklist)
-    return render(request, "checklist_detail.html", {"club": club, "airplane": airplane, "checklist": checklist, "items": items})
+    first_item = ChecklistItem.objects.filter(checklist=checklist).order_by("order").first()
+    return render(request, "checklist_detail.html", 
+                  {"club": club, "airplane": airplane, "checklist": checklist, "first_item": first_item})
+
+@login_required
+def checklist_walk(request: HttpRequest, club_id: int, airplane_id: int, checklist_id: int, item_id: int):
+    club = Club.objects.get(id=club_id)
+    airplane = Airplane.objects.get(id=airplane_id)
+    checklist = Checklist.objects.get(id=checklist_id)
+    current_item = ChecklistItem.objects.get(id=item_id)
+    index = ChecklistItem.objects.order_by("order").filter(checklist=checklist, order__lte=current_item.order).count()
+    count = ChecklistItem.objects.filter(checklist=checklist).count()
+    last_item = ChecklistItem.objects.order_by("order").filter(checklist=checklist, order__lt=current_item.order).last()
+    next_item = ChecklistItem.objects.order_by("order").filter(checklist=checklist, order__gt=current_item.order).first()
+    return render(request, "checklist_walk.html",
+                  {"club": club, "airplane": airplane, "checklist": checklist, "current_item": current_item,
+                   "last_item": last_item, "next_item": next_item, "index": index, "count": count})

@@ -14,8 +14,6 @@ Welcome
 {% block content %}
 <h1 class="ui header">{{checklist.name}} für {{airplane.name}}</h1>
 
-{% for item in items %}
-<br>  {{item.name}}
-{% endfor %}
+<a href="{% url 'checklist:checklist_walk' club_id=club.id airplane_id=airplane.id checklist_id=checklist.id item_id=first_item.id %}" class="header item">{{checklist.name}} starten</a>
 
 {% endblock %}
