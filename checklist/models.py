@@ -6,6 +6,7 @@ class Club(models.Model):
     name = models.CharField(max_length=50, help_text="Der Name des Vereins.")
     users = models.ManyToManyField(User, help_text="Mitglieder des Vereins.")
     homepage = models.CharField(max_length=100, help_text="Webseite des Vereins.", blank=True)
+    contact = models.CharField(max_length=100, help_text="Kontaktinformationen des Vereins.", blank=True)
     description = models.TextField(max_length=500, help_text="Beschreibung des Vereins.", blank=True)
 
     def __str__(self) -> str:
@@ -16,6 +17,8 @@ class Airplane(models.Model):
     clubs = models.ManyToManyField(Club, help_text="Zu welchem Verein dieses Flugzeug gehört.")
     name = models.CharField(max_length=50, help_text="Der Name des Flugzeugs.")
     callsign = models.CharField(max_length=8, help_text="Das Flugzeug Callsign.")
+    picture_url = models.CharField(max_length=100, help_text="Bild von dem Flugzeug.", blank=True)
+    description = models.TextField(max_length=500, help_text="Beschreibung des Flugzeugs.", blank=True)
 
     def __str__(self) -> str:
         return f"{self.name} ({self.callsign})"

@@ -5,8 +5,10 @@
         "fields": {
             "name": "LSVGZ",
             "homepage": "http://www.lsvgz.de",
-            "description": "Luftsportverein GZ",
+            "contact": "",
+            "description": "",
             "users": [
+                1
             ]
         }
     },
@@ -16,17 +18,8 @@
         "fields": {
             "name": "Remos G3",
             "callsign": "D-MGAN",
-            "clubs": [
-                1
-            ]
-        }
-    },
-    {
-        "model": "checklist.airplane",
-        "pk": 2,
-        "fields": {
-            "name": "Remos GX",
-            "callsign": "D-MZGZ",
+            "picture_url": "",
+            "description": "Geschwindigkeiten und Begrenzungen \r\n \r\nManövergeschwindigkeit VA              135 km/h IAS \r\nKlappengeschwindigkeit VFE 118 km/h IAS \r\nMax. Geschwindigkeit in starker Turbulenz 180 km/h IAS \r\nBestes Gleiten 120 km/h IAS \r\nLastvielfaches  +4g und -2g \r\nSeitenwindkomponente max. 27 km/h \r\nGegenwindkomponente max. 45 km/h \r\nTankinhalt 84 L  (ausfliegbar 81 L ) \r\nKraftstoffart (unverbleit) Euro Super ROZ 95/98  \r\nMax. Abfluggewicht 472,5 kg \r\nZuladung max. 160 kg",
             "clubs": [
                 1
             ]
@@ -36,50 +29,132 @@
         "model": "checklist.checklist",
         "pk": 1,
         "fields": {
-            "airplane": 2,
-            "name": "Außencheck",
-            "description": ""
-        }
-    },
-    {
-        "model": "checklist.checklist",
-        "pk": 2,
-        "fields": {
             "airplane": 1,
-            "name": "Innen-Check",
+            "name": "Außencheck",
             "description": ""
         }
     },
     {
         "model": "checklist.checklistitemgroup",
         "pk": 1,
+        "fields": {
+            "name": "Vor dem Aushallen"
+        }
+    },
+    {
+        "model": "checklist.checklistitemgroup",
+        "pk": 2,
+        "fields": {
+            "name": "Kontrolle innen"
+        }
+    },
+    {
+        "model": "checklist.checklistitemgroup",
+        "pk": 3,
+        "fields": {
+            "name": "Rundgang: Linke Seite"
+        }
+    },
+    {
+        "model": "checklist.checklistitemgroup",
+        "pk": 4,
+        "fields": {
+            "name": "Rumpf"
+        }
+    },
+    {
+        "model": "checklist.checklistitemgroup",
+        "pk": 5,
+        "fields": {
+            "name": "Rechte Seite"
+        }
+    },
+    {
+        "model": "checklist.checklistitemgroup",
+        "pk": 6,
+        "fields": {
+            "name": "Vorflugkontrolle"
+        }
+    },
+    {
+        "model": "checklist.checklistitemgroup",
+        "pk": 7,
         "fields": {
             "name": "Innen-Check"
         }
     },
     {
         "model": "checklist.checklistitemgroup",
-        "pk": 2,
+        "pk": 8,
         "fields": {
-            "name": "Anlassen des Triebwerks"
+            "name": "Anlassen des Triebwerkes"
         }
     },
     {
         "model": "checklist.checklistitemgroup",
-        "pk": 3,
+        "pk": 9,
         "fields": {
-            "name": "Vor dem Aushallen"
+            "name": "Rollen"
+        }
+    },
+    {
+        "model": "checklist.checklistitemgroup",
+        "pk": 10,
+        "fields": {
+            "name": "Vor dem Start"
+        }
+    },
+    {
+        "model": "checklist.checklistitemgroup",
+        "pk": 11,
+        "fields": {
+            "name": "Start"
+        }
+    },
+    {
+        "model": "checklist.checklistitemgroup",
+        "pk": 12,
+        "fields": {
+            "name": "Steigflug"
+        }
+    },
+    {
+        "model": "checklist.checklistitemgroup",
+        "pk": 13,
+        "fields": {
+            "name": "Reiseflug"
+        }
+    },
+    {
+        "model": "checklist.checklistitemgroup",
+        "pk": 14,
+        "fields": {
+            "name": "Sinkflug"
+        }
+    },
+    {
+        "model": "checklist.checklistitemgroup",
+        "pk": 15,
+        "fields": {
+            "name": "Landeanflug"
+        }
+    },
+    {
+        "model": "checklist.checklistitemgroup",
+        "pk": 16,
+        "fields": {
+            "name": "Abstellen des Motors"
         }
     },
     {
         "model": "checklist.checklistitem",
         "pk": 1,
         "fields": {
-            "checklist": 2,
-            "order": 0,
+            "checklist": 1,
+            "order": 10,
             "group": 1,
-            "name": "Passagier über Notfallmaßnahmen informieren",
-            "description": "",
+            "name": "Benzindrainage",
+            "description": "Benzindrainage ca. 3 Sek. betätigen, (Benzin auf  Kondenswasser prüfen)",
             "hint": ""
         }
     },
@@ -87,11 +162,11 @@
         "model": "checklist.checklistitem",
         "pk": 2,
         "fields": {
-            "checklist": 2,
-            "order": 10,
+            "checklist": 1,
+            "order": 20,
             "group": 1,
-            "name": "Sitze eingestellt und verriegelt",
-            "description": "",
+            "name": "Bordbuch u. alle Papiere",
+            "description": "Bordbuch u. alle Papiere vorhanden und geprüft, nächste Stundenkontrolle?",
             "hint": ""
         }
     },
@@ -99,11 +174,11 @@
         "model": "checklist.checklistitem",
         "pk": 3,
         "fields": {
-            "checklist": 2,
-            "order": 20,
-            "group": 1,
-            "name": "Parkbremse setzen",
-            "description": "",
+            "checklist": 1,
+            "order": 30,
+            "group": 2,
+            "name": "Rettungsgerät",
+            "description": "Rettungsgerät gesichert",
             "hint": ""
         }
     },
@@ -111,11 +186,11 @@
         "model": "checklist.checklistitem",
         "pk": 4,
         "fields": {
-            "checklist": 2,
-            "order": 30,
-            "group": 1,
-            "name": "Gurte angepasst und verschlossen",
-            "description": "",
+            "checklist": 1,
+            "order": 40,
+            "group": 2,
+            "name": "Querruderanschluss links / rechts",
+            "description": "Querruderanschluss links / rechts gesichtert",
             "hint": ""
         }
     },
@@ -123,11 +198,11 @@
         "model": "checklist.checklistitem",
         "pk": 5,
         "fields": {
-            "checklist": 2,
-            "order": 40,
-            "group": 1,
-            "name": "Türen geschlossen und verriegelt",
-            "description": "",
+            "checklist": 1,
+            "order": 50,
+            "group": 2,
+            "name": "Sicherung Türscharniere",
+            "description": "Sicherung Türscharniere kontrollieren (roter Griff vorne)",
             "hint": ""
         }
     },
@@ -135,11 +210,11 @@
         "model": "checklist.checklistitem",
         "pk": 6,
         "fields": {
-            "checklist": 2,
-            "order": 50,
+            "checklist": 1,
+            "order": 60,
             "group": 2,
-            "name": "Abzug Rettungsgerät entsichern",
-            "description": "",
+            "name": "Zündung",
+            "description": "Zündung aus",
             "hint": ""
         }
     },
@@ -147,11 +222,11 @@
         "model": "checklist.checklistitem",
         "pk": 7,
         "fields": {
-            "checklist": 2,
-            "order": 60,
+            "checklist": 1,
+            "order": 70,
             "group": 2,
-            "name": "Kraftstoffhahn offen",
-            "description": "",
+            "name": "Hauptschalter",
+            "description": "Hauptschalter ein",
             "hint": ""
         }
     },
@@ -160,10 +235,10 @@
         "pk": 8,
         "fields": {
             "checklist": 1,
-            "order": 0,
-            "group": 3,
-            "name": "Benzindrainage",
-            "description": "",
+            "order": 80,
+            "group": 2,
+            "name": "Benzin",
+            "description": "Benzin (Tankuhr und Steigrohr) prüfen",
             "hint": ""
         }
     },
@@ -172,10 +247,370 @@
         "pk": 9,
         "fields": {
             "checklist": 1,
-            "order": 10,
+            "order": 90,
+            "group": 2,
+            "name": "Landeklappen",
+            "description": "Landeklappen auf 15 Grad ausfahren",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 10,
+        "fields": {
+            "checklist": 1,
+            "order": 90,
+            "group": 2,
+            "name": "Landeklappen",
+            "description": "Landeklappen auf 15 Grad ausfahren",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 11,
+        "fields": {
+            "checklist": 1,
+            "order": 100,
+            "group": 2,
+            "name": "Hauptschalter",
+            "description": "Hauptschalter aus",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 12,
+        "fields": {
+            "checklist": 1,
+            "order": 110,
             "group": 3,
-            "name": "Bordbuch und alle Papiere",
-            "description": "",
+            "name": "Flügelanschluss",
+            "description": "Flügelanschluss gesichert",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 13,
+        "fields": {
+            "checklist": 1,
+            "order": 120,
+            "group": 3,
+            "name": "Statische Druckabnahme",
+            "description": "Statische Druckabnahme frei",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 14,
+        "fields": {
+            "checklist": 1,
+            "order": 130,
+            "group": 3,
+            "name": "Fahrwerk",
+            "description": "Fahrwerk (Luftdruck, Rutschmarke) prüfen",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 15,
+        "fields": {
+            "checklist": 1,
+            "order": 140,
+            "group": 3,
+            "name": "Nasenleiste",
+            "description": "Nasenleiste keine Beschädigung",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 16,
+        "fields": {
+            "checklist": 1,
+            "order": 150,
+            "group": 3,
+            "name": "Staurohr",
+            "description": "Staurohr prüfen",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 17,
+        "fields": {
+            "checklist": 1,
+            "order": 160,
+            "group": 3,
+            "name": "Randbogen, Pos. Licht",
+            "description": "Randbogen, Pos. Licht prüfen",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 18,
+        "fields": {
+            "checklist": 1,
+            "order": 170,
+            "group": 3,
+            "name": "Querruder, Landeklappe",
+            "description": "Querruder, Landeklappe gesichert und freigängig",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 19,
+        "fields": {
+            "checklist": 1,
+            "order": 180,
+            "group": 4,
+            "name": "Antennen",
+            "description": "Antennen auf festen Sitz prüfen",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 20,
+        "fields": {
+            "checklist": 1,
+            "order": 190,
+            "group": 4,
+            "name": "Höhenflosse",
+            "description": "Höhenflosse gesichert",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 21,
+        "fields": {
+            "checklist": 1,
+            "order": 200,
+            "group": 4,
+            "name": "Höhenruder",
+            "description": "Höhenruder gesichert und freigängig",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 22,
+        "fields": {
+            "checklist": 1,
+            "order": 210,
+            "group": 4,
+            "name": "Schleppkupplung",
+            "description": "Schleppkupplung kontrollieren",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 23,
+        "fields": {
+            "checklist": 1,
+            "order": 220,
+            "group": 4,
+            "name": "Seitenruder",
+            "description": "Seitenruder gesichert und freigängig",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 24,
+        "fields": {
+            "checklist": 1,
+            "order": 230,
+            "group": 4,
+            "name": "Tankverschluss",
+            "description": "Tankverschluss verriegelt",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 25,
+        "fields": {
+            "checklist": 1,
+            "order": 240,
+            "group": 5,
+            "name": "Landeklappe, Querruder",
+            "description": "Landeklappe, Querruder gesichert und freigängig",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 26,
+        "fields": {
+            "checklist": 1,
+            "order": 250,
+            "group": 5,
+            "name": "Randbogen, Pos. Licht",
+            "description": "Randbogen, Pos. Licht prüfen",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 27,
+        "fields": {
+            "checklist": 1,
+            "order": 260,
+            "group": 5,
+            "name": "Nasenleiste",
+            "description": "Nasenleiste keine Beschädigung",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 28,
+        "fields": {
+            "checklist": 1,
+            "order": 270,
+            "group": 5,
+            "name": "Fahrwerk",
+            "description": "Fahrwerk (Luftdruck, Rutschmarke) prüfen",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 29,
+        "fields": {
+            "checklist": 1,
+            "order": 280,
+            "group": 5,
+            "name": "Flügelanschluss",
+            "description": "Flügelanschluss gesichert",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 30,
+        "fields": {
+            "checklist": 1,
+            "order": 290,
+            "group": 5,
+            "name": "Statische Druckabnahme",
+            "description": "Statische Druckabnahme frei",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 31,
+        "fields": {
+            "checklist": 1,
+            "order": 300,
+            "group": 4,
+            "name": "Ölstand",
+            "description": "Ölstand kontrollieren",
+            "hint": "Zündung aus, Hauptschalter aus, Motor v. Hand drehen \r\nbis „Rülpsgeräusch“ hörbar, Ölstand messen! \r\nBei Bedarf nachfüllen, max. ¼ l"
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 32,
+        "fields": {
+            "checklist": 1,
+            "order": 310,
+            "group": 4,
+            "name": "Kühlmittelstand",
+            "description": "Kühlmittelstand kontrollieren",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 33,
+        "fields": {
+            "checklist": 1,
+            "order": 320,
+            "group": 4,
+            "name": "Propeller und Spinner",
+            "description": "Propeller und Spinner keine Beschädigung",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 34,
+        "fields": {
+            "checklist": 1,
+            "order": 330,
+            "group": 4,
+            "name": "Cowling",
+            "description": "Cowling gesichert",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 35,
+        "fields": {
+            "checklist": 1,
+            "order": 340,
+            "group": 4,
+            "name": "Bugrad",
+            "description": "Bugrad (Luftdruck und Rutschmarke) prüfen",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 36,
+        "fields": {
+            "checklist": 1,
+            "order": 350,
+            "group": 4,
+            "name": "Landescheinwerfer",
+            "description": "Landescheinwerfer kontrolliert",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 37,
+        "fields": {
+            "checklist": 1,
+            "order": 360,
+            "group": 4,
+            "name": "Öl- und Wasserkühler",
+            "description": "Öl- und Wasserkühler sauber",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 38,
+        "fields": {
+            "checklist": 1,
+            "order": 370,
+            "group": 4,
+            "name": "Motorraum",
+            "description": "Motorraum auf Fremdkörper kontrollieren",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 39,
+        "fields": {
+            "checklist": 1,
+            "order": 380,
+            "group": 6,
+            "name": "Vorflugkontrolle",
+            "description": "Vorflugkontrolle im Bordbuch dokumentieren",
             "hint": ""
         }
     }
