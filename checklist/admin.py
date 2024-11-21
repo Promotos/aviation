@@ -9,7 +9,7 @@ admin.site.register(Checklist)
 
 class ChecklistItemAdmin(admin.ModelAdmin):
     list_display = ["order", "group", "name"]
-    list_filter = ["group"]
+    list_filter = ["checklist", "group"]
 
 
 admin.site.register(ChecklistItem, ChecklistItemAdmin)
