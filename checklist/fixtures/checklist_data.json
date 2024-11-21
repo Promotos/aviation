@@ -19,7 +19,7 @@
             "name": "Remos G3",
             "callsign": "D-MGAN",
             "picture_url": "",
-            "description": "Geschwindigkeiten und Begrenzungen \r\n \r\nManövergeschwindigkeit VA              135 km/h IAS \r\nKlappengeschwindigkeit VFE 118 km/h IAS \r\nMax. Geschwindigkeit in starker Turbulenz 180 km/h IAS \r\nBestes Gleiten 120 km/h IAS \r\nLastvielfaches  +4g und -2g \r\nSeitenwindkomponente max. 27 km/h \r\nGegenwindkomponente max. 45 km/h \r\nTankinhalt 84 L  (ausfliegbar 81 L ) \r\nKraftstoffart (unverbleit) Euro Super ROZ 95/98  \r\nMax. Abfluggewicht 472,5 kg \r\nZuladung max. 160 kg",
+            "description": "Geschwindigkeiten und Begrenzungen \r\n \r\nMan�vergeschwindigkeit VA              135 km/h IAS \r\nKlappengeschwindigkeit VFE 118 km/h IAS \r\nMax. Geschwindigkeit in starker Turbulenz 180 km/h IAS \r\nBestes Gleiten 120 km/h IAS \r\nLastvielfaches  +4g und -2g \r\nSeitenwindkomponente max. 27 km/h \r\nGegenwindkomponente max. 45 km/h \r\nTankinhalt 84 L  (ausfliegbar 81 L ) \r\nKraftstoffart (unverbleit) Euro Super ROZ 95/98  \r\nMax. Abfluggewicht 472,5 kg \r\nZuladung max. 160 kg",
             "clubs": [
                 1
             ]
@@ -30,7 +30,16 @@
         "pk": 1,
         "fields": {
             "airplane": 1,
-            "name": "Außencheck",
+            "name": "Au�encheck",
+            "description": ""
+        }
+    },
+    {
+        "model": "checklist.checklist",
+        "pk": 2,
+        "fields": {
+            "airplane": 1,
+            "name": "Innencheck",
             "description": ""
         }
     },
@@ -154,7 +163,7 @@
             "order": 10,
             "group": 1,
             "name": "Benzindrainage",
-            "description": "Benzindrainage ca. 3 Sek. betätigen, (Benzin auf  Kondenswasser prüfen)",
+            "description": "Benzindrainage ca. 3 Sek. bet�tigen, (Benzin auf  Kondenswasser pr�fen)",
             "hint": ""
         }
     },
@@ -166,7 +175,7 @@
             "order": 20,
             "group": 1,
             "name": "Bordbuch u. alle Papiere",
-            "description": "Bordbuch u. alle Papiere vorhanden und geprüft, nächste Stundenkontrolle?",
+            "description": "Bordbuch u. alle Papiere vorhanden und gepr�ft, n�chste Stundenkontrolle?",
             "hint": ""
         }
     },
@@ -177,8 +186,8 @@
             "checklist": 1,
             "order": 30,
             "group": 2,
-            "name": "Rettungsgerät",
-            "description": "Rettungsgerät gesichert",
+            "name": "Rettungsger�t",
+            "description": "Rettungsger�t gesichert",
             "hint": ""
         }
     },
@@ -201,8 +210,8 @@
             "checklist": 1,
             "order": 50,
             "group": 2,
-            "name": "Sicherung Türscharniere",
-            "description": "Sicherung Türscharniere kontrollieren (roter Griff vorne)",
+            "name": "Sicherung T�rscharniere",
+            "description": "Sicherung T�rscharniere kontrollieren (roter Griff vorne)",
             "hint": ""
         }
     },
@@ -213,8 +222,8 @@
             "checklist": 1,
             "order": 60,
             "group": 2,
-            "name": "Zündung",
-            "description": "Zündung aus",
+            "name": "Z�ndung",
+            "description": "Z�ndung aus",
             "hint": ""
         }
     },
@@ -238,7 +247,7 @@
             "order": 80,
             "group": 2,
             "name": "Benzin",
-            "description": "Benzin (Tankuhr und Steigrohr) prüfen",
+            "description": "Benzin (Tankuhr und Steigrohr) pr�fen",
             "hint": ""
         }
     },
@@ -285,8 +294,8 @@
             "checklist": 1,
             "order": 110,
             "group": 3,
-            "name": "Flügelanschluss",
-            "description": "Flügelanschluss gesichert",
+            "name": "Fl�gelanschluss",
+            "description": "Fl�gelanschluss gesichert",
             "hint": ""
         }
     },
@@ -310,7 +319,7 @@
             "order": 130,
             "group": 3,
             "name": "Fahrwerk",
-            "description": "Fahrwerk (Luftdruck, Rutschmarke) prüfen",
+            "description": "Fahrwerk (Luftdruck, Rutschmarke) pr�fen",
             "hint": ""
         }
     },
@@ -322,7 +331,7 @@
             "order": 140,
             "group": 3,
             "name": "Nasenleiste",
-            "description": "Nasenleiste keine Beschädigung",
+            "description": "Nasenleiste keine Besch�digung",
             "hint": ""
         }
     },
@@ -334,7 +343,7 @@
             "order": 150,
             "group": 3,
             "name": "Staurohr",
-            "description": "Staurohr prüfen",
+            "description": "Staurohr pr�fen",
             "hint": ""
         }
     },
@@ -346,7 +355,7 @@
             "order": 160,
             "group": 3,
             "name": "Randbogen, Pos. Licht",
-            "description": "Randbogen, Pos. Licht prüfen",
+            "description": "Randbogen, Pos. Licht pr�fen",
             "hint": ""
         }
     },
@@ -358,7 +367,7 @@
             "order": 170,
             "group": 3,
             "name": "Querruder, Landeklappe",
-            "description": "Querruder, Landeklappe gesichert und freigängig",
+            "description": "Querruder, Landeklappe gesichert und freig�ngig",
             "hint": ""
         }
     },
@@ -370,7 +379,7 @@
             "order": 180,
             "group": 4,
             "name": "Antennen",
-            "description": "Antennen auf festen Sitz prüfen",
+            "description": "Antennen auf festen Sitz pr�fen",
             "hint": ""
         }
     },
@@ -381,8 +390,8 @@
             "checklist": 1,
             "order": 190,
             "group": 4,
-            "name": "Höhenflosse",
-            "description": "Höhenflosse gesichert",
+            "name": "H�henflosse",
+            "description": "H�henflosse gesichert",
             "hint": ""
         }
     },
@@ -393,8 +402,8 @@
             "checklist": 1,
             "order": 200,
             "group": 4,
-            "name": "Höhenruder",
-            "description": "Höhenruder gesichert und freigängig",
+            "name": "H�henruder",
+            "description": "H�henruder gesichert und freig�ngig",
             "hint": ""
         }
     },
@@ -418,7 +427,7 @@
             "order": 220,
             "group": 4,
             "name": "Seitenruder",
-            "description": "Seitenruder gesichert und freigängig",
+            "description": "Seitenruder gesichert und freig�ngig",
             "hint": ""
         }
     },
@@ -442,7 +451,7 @@
             "order": 240,
             "group": 5,
             "name": "Landeklappe, Querruder",
-            "description": "Landeklappe, Querruder gesichert und freigängig",
+            "description": "Landeklappe, Querruder gesichert und freig�ngig",
             "hint": ""
         }
     },
@@ -454,7 +463,7 @@
             "order": 250,
             "group": 5,
             "name": "Randbogen, Pos. Licht",
-            "description": "Randbogen, Pos. Licht prüfen",
+            "description": "Randbogen, Pos. Licht pr�fen",
             "hint": ""
         }
     },
@@ -466,7 +475,7 @@
             "order": 260,
             "group": 5,
             "name": "Nasenleiste",
-            "description": "Nasenleiste keine Beschädigung",
+            "description": "Nasenleiste keine Besch�digung",
             "hint": ""
         }
     },
@@ -478,7 +487,7 @@
             "order": 270,
             "group": 5,
             "name": "Fahrwerk",
-            "description": "Fahrwerk (Luftdruck, Rutschmarke) prüfen",
+            "description": "Fahrwerk (Luftdruck, Rutschmarke) pr�fen",
             "hint": ""
         }
     },
@@ -489,8 +498,8 @@
             "checklist": 1,
             "order": 280,
             "group": 5,
-            "name": "Flügelanschluss",
-            "description": "Flügelanschluss gesichert",
+            "name": "Fl�gelanschluss",
+            "description": "Fl�gelanschluss gesichert",
             "hint": ""
         }
     },
@@ -513,9 +522,9 @@
             "checklist": 1,
             "order": 300,
             "group": 4,
-            "name": "Ölstand",
-            "description": "Ölstand kontrollieren",
-            "hint": "Zündung aus, Hauptschalter aus, Motor v. Hand drehen \r\nbis „Rülpsgeräusch“ hörbar, Ölstand messen! \r\nBei Bedarf nachfüllen, max. ¼ l"
+            "name": "�lstand",
+            "description": "�lstand kontrollieren",
+            "hint": "Z�ndung aus, Hauptschalter aus, Motor v. Hand drehen \r\nbis �R�lpsger�usch� h�rbar, �lstand messen! \r\nBei Bedarf nachf�llen, max. � l"
         }
     },
     {
@@ -525,8 +534,8 @@
             "checklist": 1,
             "order": 310,
             "group": 4,
-            "name": "Kühlmittelstand",
-            "description": "Kühlmittelstand kontrollieren",
+            "name": "K�hlmittelstand",
+            "description": "K�hlmittelstand kontrollieren",
             "hint": ""
         }
     },
@@ -538,7 +547,7 @@
             "order": 320,
             "group": 4,
             "name": "Propeller und Spinner",
-            "description": "Propeller und Spinner keine Beschädigung",
+            "description": "Propeller und Spinner keine Besch�digung",
             "hint": ""
         }
     },
@@ -562,7 +571,7 @@
             "order": 340,
             "group": 4,
             "name": "Bugrad",
-            "description": "Bugrad (Luftdruck und Rutschmarke) prüfen",
+            "description": "Bugrad (Luftdruck und Rutschmarke) pr�fen",
             "hint": ""
         }
     },
@@ -585,8 +594,8 @@
             "checklist": 1,
             "order": 360,
             "group": 4,
-            "name": "Öl- und Wasserkühler",
-            "description": "Öl- und Wasserkühler sauber",
+            "name": "�l- und Wasserk�hler",
+            "description": "�l- und Wasserk�hler sauber",
             "hint": ""
         }
     },
@@ -598,7 +607,7 @@
             "order": 370,
             "group": 4,
             "name": "Motorraum",
-            "description": "Motorraum auf Fremdkörper kontrollieren",
+            "description": "Motorraum auf Fremdk�rper kontrollieren",
             "hint": ""
         }
     },
@@ -611,6 +620,534 @@
             "group": 6,
             "name": "Vorflugkontrolle",
             "description": "Vorflugkontrolle im Bordbuch dokumentieren",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 40,
+        "fields": {
+            "checklist": 2,
+            "order": 10,
+            "group": 7,
+            "name": "Notfallma�nahmen",
+            "description": "Passagier �ber Notfallma�nahmen informieren",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 41,
+        "fields": {
+            "checklist": 2,
+            "order": 20,
+            "group": 7,
+            "name": "Sitze",
+            "description": "Sitze eingestellt und verriegelt",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 42,
+        "fields": {
+            "checklist": 2,
+            "order": 30,
+            "group": 7,
+            "name": "Parkbremse",
+            "description": "Parkbremse setzen",
+            "hint": "Heben ganz gedr�ckt"
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 43,
+        "fields": {
+            "checklist": 2,
+            "order": 40,
+            "group": 7,
+            "name": "Gurte",
+            "description": "Gurte angepasst und verschlossen",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 44,
+        "fields": {
+            "checklist": 2,
+            "order": 50,
+            "group": 7,
+            "name": "T�ren",
+            "description": "T�ren geschlossen und verriegelt",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 45,
+        "fields": {
+            "checklist": 2,
+            "order": 60,
+            "group": 8,
+            "name": "Rettungsger�t",
+            "description": "Abzug Rettungsger�t entsichern",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 46,
+        "fields": {
+            "checklist": 2,
+            "order": 70,
+            "group": 8,
+            "name": "Kraftstoffhahn",
+            "description": "Kraftstoffhahn offen",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 47,
+        "fields": {
+            "checklist": 2,
+            "order": 80,
+            "group": 8,
+            "name": "Hauptschalter",
+            "description": "Hauptschalter ein",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 48,
+        "fields": {
+            "checklist": 2,
+            "order": 90,
+            "group": 8,
+            "name": "Avionikschalter",
+            "description": "Avionikschalter aus",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 49,
+        "fields": {
+            "checklist": 2,
+            "order": 100,
+            "group": 8,
+            "name": "ACL",
+            "description": "Antikollisionslicht ein",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 50,
+        "fields": {
+            "checklist": 2,
+            "order": 110,
+            "group": 8,
+            "name": "Benzinpumpe",
+            "description": "Benzinpumpe ein",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 51,
+        "fields": {
+            "checklist": 2,
+            "order": 120,
+            "group": 8,
+            "name": "Gashebel",
+            "description": "Gashebel 5mm",
+            "hint": "Kaltstart kein Gas"
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 52,
+        "fields": {
+            "checklist": 2,
+            "order": 130,
+            "group": 8,
+            "name": "Choke",
+            "description": "Choke nach Bedarf",
+            "hint": "Kaltstart voll gezogen"
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 53,
+        "fields": {
+            "checklist": 2,
+            "order": 140,
+            "group": 8,
+            "name": "Vergaservorw�rmung",
+            "description": "Vergaservorw�rmung kalt",
+            "hint": "Hebel gedr�ckt"
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 55,
+        "fields": {
+            "checklist": 2,
+            "order": 150,
+            "group": 8,
+            "name": "Luftschraubenbereich",
+            "description": "Luftschraubenbereich frei",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 56,
+        "fields": {
+            "checklist": 2,
+            "order": 160,
+            "group": 8,
+            "name": "Anlasser",
+            "description": "Anlasser bet�tigen",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 57,
+        "fields": {
+            "checklist": 2,
+            "order": 170,
+            "group": 8,
+            "name": "�ldruck",
+            "description": "�ldruck mindest. 2,5 bar.",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 58,
+        "fields": {
+            "checklist": 2,
+            "order": 180,
+            "group": 8,
+            "name": "Drehzahl",
+            "description": "Drehzahl 2200 U/min. warmlaufen lassen 2 min. dann 2500",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 59,
+        "fields": {
+            "checklist": 2,
+            "order": 190,
+            "group": 8,
+            "name": "Benzinpumpe",
+            "description": "Benzinpumpe aus",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 60,
+        "fields": {
+            "checklist": 2,
+            "order": 200,
+            "group": 8,
+            "name": "Avionikschalter und Intercom",
+            "description": "Avionikschalter und Intercom ein",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 61,
+        "fields": {
+            "checklist": 2,
+            "order": 210,
+            "group": 8,
+            "name": "Transponder",
+            "description": "Transponder stby / VFR 7000",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 63,
+        "fields": {
+            "checklist": 2,
+            "order": 220,
+            "group": 9,
+            "name": "Bremse",
+            "description": "Bremse l�sen",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 64,
+        "fields": {
+            "checklist": 2,
+            "order": 230,
+            "group": 9,
+            "name": "Bugrad",
+            "description": "Bugrad entlasten",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 65,
+        "fields": {
+            "checklist": 2,
+            "order": 240,
+            "group": 9,
+            "name": "Ruder",
+            "description": "Ruder freig�ngig",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 66,
+        "fields": {
+            "checklist": 2,
+            "order": 250,
+            "group": 9,
+            "name": "Bremse",
+            "description": "Bremse pr�fen",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 67,
+        "fields": {
+            "checklist": 2,
+            "order": 260,
+            "group": 9,
+            "name": "Horizont",
+            "description": "K�nstlicher Horizont eingestellt",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 68,
+        "fields": {
+            "checklist": 2,
+            "order": 270,
+            "group": 9,
+            "name": "Gyro",
+            "description": "Gyro eingestellt",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 69,
+        "fields": {
+            "checklist": 2,
+            "order": 280,
+            "group": 10,
+            "name": "Parkbremse",
+            "description": "Parkbremse setzen",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 70,
+        "fields": {
+            "checklist": 2,
+            "order": 290,
+            "group": 10,
+            "name": "H�henmesser",
+            "description": "H�henmesser QNH einstellen",
+            "hint": "EDMG 1460ft"
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 71,
+        "fields": {
+            "checklist": 2,
+            "order": 300,
+            "group": 10,
+            "name": "Barometer",
+            "description": "EFIS Barometer einstellen",
+            "hint": "EDMG 1460ft"
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 72,
+        "fields": {
+            "checklist": 2,
+            "order": 310,
+            "group": 10,
+            "name": "�ltemperatur",
+            "description": "�ltemperatur Minimum 50� C",
+            "hint": "Engine panel gr�n \"Engine ready\""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 73,
+        "fields": {
+            "checklist": 2,
+            "order": 320,
+            "group": 10,
+            "name": "Benzinpumpe",
+            "description": "Benzinpumpe ein",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 74,
+        "fields": {
+            "checklist": 2,
+            "order": 330,
+            "group": 10,
+            "name": "Magnetprobe",
+            "description": "Magnetprobe 4000 U/min",
+            "hint": "Max. Abfall 300 U/min"
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 75,
+        "fields": {
+            "checklist": 2,
+            "order": 340,
+            "group": 10,
+            "name": "Vergaservorw�rmung",
+            "description": "Vergaservorw�rmung pr�fen",
+            "hint": "Zunahme der Ansaugtemperatur"
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 76,
+        "fields": {
+            "checklist": 2,
+            "order": 350,
+            "group": 10,
+            "name": "Trimmung",
+            "description": "Trimmung neutral",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 77,
+        "fields": {
+            "checklist": 2,
+            "order": 360,
+            "group": 10,
+            "name": "Klappen",
+            "description": "Klappen in Startstellung",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 78,
+        "fields": {
+            "checklist": 2,
+            "order": 370,
+            "group": 10,
+            "name": "�lk�hlerklappe",
+            "description": "�lk�hlerklappe ge�ffnet",
+            "hint": "Hebel ganz gezogen"
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 79,
+        "fields": {
+            "checklist": 2,
+            "order": 380,
+            "group": 10,
+            "name": "Transponder",
+            "description": "Transponder ACS",
+            "hint": "VFR 7000"
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 80,
+        "fields": {
+            "checklist": 2,
+            "order": 390,
+            "group": 10,
+            "name": "Choke",
+            "description": "Choke aus",
+            "hint": "Hebel ganz gedr�ckt"
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 81,
+        "fields": {
+            "checklist": 2,
+            "order": 400,
+            "group": 10,
+            "name": "Ampel",
+            "description": "Ampel geschaltet",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 82,
+        "fields": {
+            "checklist": 2,
+            "order": 410,
+            "group": 10,
+            "name": "Parkbremse",
+            "description": "Parkbremse l�sen",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 83,
+        "fields": {
+            "checklist": 2,
+            "order": 420,
+            "group": 10,
+            "name": "Ruderkontrolle",
+            "description": "Ruderkontrolle - alle Achsen",
+            "hint": "alle Ruder freig�ngig"
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 84,
+        "fields": {
+            "checklist": 2,
+            "order": 430,
+            "group": 10,
+            "name": "Scheinwerfer",
+            "description": "Scheinwerfer ein",
+            "hint": ""
+        }
+    },
+    {
+        "model": "checklist.checklistitem",
+        "pk": 85,
+        "fields": {
+            "checklist": 2,
+            "order": 440,
+            "group": 10,
+            "name": "Anflugsektor frei",
+            "description": "Anflugsektor frei",
             "hint": ""
         }
     }
