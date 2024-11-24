@@ -44,16 +44,22 @@ Welcome
 
 <hr>
 
-{% if last_item %}
-    <button class="ui button">
-        <a href="{% url 'checklist:checklist_walk' club_id=club.id airplane_id=airplane.id checklist_id=checklist.id item_id=last_item.id %}" class="header item">zurück</a>
-    </button>
-{% endif %}
-
-{% if next_item %}
-    <button class="ui button">
-        <a href="{% url 'checklist:checklist_walk' club_id=club.id airplane_id=airplane.id checklist_id=checklist.id item_id=next_item.id %}" class="header item">nächstes</a>
-    </button>
-{% endif %}
+<div class="ui grid">
+    <div class="four wide column"> 
+        {% if last_item %}
+            <button class="ui button">
+                <a href="{% url 'checklist:checklist_walk' club_id=club.id airplane_id=airplane.id checklist_id=checklist.id item_id=last_item.id %}" class="header item">zurück</a>
+            </button>
+        {% endif %}
+    </div>
+    <div class="eight wide column"> &nbsp; </div>
+    <div class="four wide column right aligned"> 
+        {% if next_item %}
+            <button class="ui button">
+                <a href="{% url 'checklist:checklist_walk' club_id=club.id airplane_id=airplane.id checklist_id=checklist.id item_id=next_item.id %}" class="header item">nächstes</a>
+            </button>
+        {% endif %}        
+    </div>
+</div>
 
 {% endblock %}
